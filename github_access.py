@@ -17,34 +17,52 @@ def generateData(repoAddress, graphData):
     # append repo to overall data
     graphData["children"].append(child)
 
+
 def getRepoData(repoAddress):
         week = [
             {
-                "name" : "MONDAY",
-                "children" : []
+                "name": "MONDAY",
+                "children": []
             },
             {
-                "name" : "TUESDAY",
-                "children" : []
+                "name": "TUESDAY",
+                "children": []
             },
             {
-                "name" : "WEDNESDAY",
-                "children" : []
+                "name": "WEDNESDAY",
+                "children": []
             },
             {
-                "name" : "THURSDAY",
-                "children" : []
+                "name": "THURSDAY",
+                "children": []
             },
             {
-                "name" : "FRIDAY",
-                "children" : []
+                "name": "FRIDAY",
+                "children": []
             },
             {
-                "name" : "SATURDAY",
-                "children" : []
+                "name": "SATURDAY",
+                "children": []
             },
             {
-                "name" : "SUNDAY",
-                "children" : []
+                "name": "SUNDAY",
+                "children": []
             }
     ]
+
+    repo = g.get_repo(repoAddress)
+
+    commits = repo.get_commits()
+    for commit in commits:
+        if commit.commit is not None:
+            weekday = (commit.commit.author.date).weekday()
+            author = commit.commmit.author
+
+            authors = [x for x in week[weekday]["children"] if x["name"] == (author)]
+            if(not authors):
+                week[weekday]["children"].append({"name": (author), "value": 1})
+            else:
+                authorObject = authors[0]
+                authorObject["value"] += 1
+    
+    return week
