@@ -16,3 +16,35 @@ def generateData(repoAddress, graphData):
     }
     # append repo to overall data
     graphData["children"].append(child)
+
+def getRepoData(repoAddress):
+        week = [
+            {
+                "name" : "MONDAY",
+                "children" : []
+            },
+            {
+                "name" : "TUESDAY",
+                "children" : []
+            },
+            {
+                "name" : "WEDNESDAY",
+                "children" : []
+            },
+            {
+                "name" : "THURSDAY",
+                "children" : []
+            },
+            {
+                "name" : "FRIDAY",
+                "children" : []
+            },
+            {
+                "name" : "SATURDAY",
+                "children" : []
+            },
+            {
+                "name" : "SUNDAY",
+                "children" : []
+            }
+    ]
