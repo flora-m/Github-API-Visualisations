@@ -34,8 +34,8 @@ def structureJSON(repos, graphData):
 
 
 def getRepoData(repoAddress):
-        # structure for d3
-        week = [
+    # structure for d3
+    week = [
             {
                 "name": "MONDAY",
                 "children": []
@@ -65,7 +65,6 @@ def getRepoData(repoAddress):
                 "children": []
             }
     ]
-
     repo = g.get_repo(repoAddress)
     # get commits from repo (only master/main branch)
     commits = repo.get_commits()
