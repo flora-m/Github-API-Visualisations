@@ -23,6 +23,7 @@ def index2():
     print(repos)
     generateData(repos)
     graph = createGraph()
+    return render_template("graphPage.html", graph = graph)
 
 
 def handleInput(repos, repo):
