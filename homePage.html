@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+          .node {}
+      
+          .link {
+            stroke: #999;
+            stroke-opacity: .6;
+            stroke-width: 1px;
+          }
+        </style>
+      </head>
+<body style="text-align:center;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="color:purple;">
+        Weekday Popularity
+    </h1>
+
+    <p>
+        This is a project for the module CSU33012 Software Engineering which aims to look into the trends of which days are more <br>
+        popular than others in terms of number of commits within different repos. The focus is particularly on large repos which are <br>
+        dominated by one language.  
+        <br> <br>
+        Please enter up to 5 addresses of some GitHub repositories into the fields below. <br>
+        Example of a repo address: nating/cs-exams
+      </p>
+      <form action="{{ url_for('index2') }}" method="post">
+        <input type="text" name="repo1">
+        <input type="text" name="repo2">
+        <input type="text" name="repo3">
+        <input type="text" name="repo4">
+        <input type="text" name="repo5">
+        <input type="submit">
+      </form>
+</body>
+</html>>
