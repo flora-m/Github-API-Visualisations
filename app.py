@@ -1,5 +1,6 @@
-from flask import Flask, request, render_template, jsonifyfrom collections import defaultdict, OrderedDict
-import collections import defaultdict, OrderedDict
+from flask import Flask, request, render_template, jsonify
+from collections import defaultdict, OrderedDict
+import collections
 import sys
 import json
 from get_json import generateData
