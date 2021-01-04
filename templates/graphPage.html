@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <body style="text-align:center;"> 
-    <p> 
-      This graph represents different repositories and how often commits are made to them on each weekday. <br>
-      You can search for new repositories below.
-    </p>
-    <form action="{{ url_for('index2') }}" method="post">
-        <input type="text" name="repo1">
-        <input type="text" name="repo2">
-        <input type="text" name="repo3">
-        <input type="text" name="repo4">
-        <input type="text" name="repo5">
-        <input type="submit">
+    <h1 style="color:purple;">
+       Weekday Popularity
+    </h1>
+    <div>
+      <p> 
+        This graph represents how many commits are made to repositories on each weekday and the authors contributing on those days. <br>
+        You can search for new repositories below. 
+      </p>
+      <form action="{{ url_for('index2') }}" method="post">
+          <input type="text" name="repo1">
+          <input type="text" name="repo2">
+          <input type="text" name="repo3">
+          <input type="text" name="repo4">
+          <input type="text" name="repo5">
+          <input type="submit">
       </form>
-    <p></p>
+      <br>
+     </div>
+     
+
     
 
 
@@ -29,7 +36,7 @@
   stroke-width: 1.5px;
 }
 .node--leaf {
-  fill: white;
+  fill: hsl(300, 100%, 95%);
 }
 .label {
   font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -44,7 +51,7 @@
 </style>
 
 
-<svg width="800" height="800" id="svg1" style="border:1px solid purple"></svg>
+<svg width="600" height="600" id="svg1" style="border:1px solid purple"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -55,7 +62,7 @@ var svg = d3.select("svg"),
 
 var color = d3.scaleLinear()
     .domain([-1, 5])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .range(["hsl(300, 100%, 95%)", "hsl(300, 70%, 30%)"])
     .interpolate(d3.interpolateHcl);
 
 var pack = d3.pack()
