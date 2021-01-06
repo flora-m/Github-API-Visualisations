@@ -18,7 +18,7 @@ This project was developed using Python3 and the PyGithub library. Flask was use
   - type in terminal: "python -m flask -run"
   - open URL in browser
   - submit repositories to look at and click submit
-  - if there are any changes made to the code, press "ctr + C" in terminal to stop program and delete the data.json folder 
+  - if there are any changes made to the code, press "CTRL + C" in terminal to stop program and delete the data.json folder before      running it again 
   
 # Home Page
 
@@ -32,4 +32,4 @@ This project was developed using Python3 and the PyGithub library. Flask was use
 
 ![](screenshots/weekday_popularity.gif)
 
-note: the GIF has been sped up to make demonstration smoother
+Note: the GIF file has been sped up to make demonstration smoother
