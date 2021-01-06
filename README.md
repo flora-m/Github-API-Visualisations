@@ -22,11 +22,11 @@ This project was developed using Python3 and the PyGithub library. Flask was use
   
 # Home Page
 
-![](screenshots/homepage.png)
+![](screenshots/homepage.PNG)
 
 # Graph Page
 
-![](screenshots/graphPage.png)
+![](screenshots/graphPage.PNG)
 
 # Demonstration GIF
 
