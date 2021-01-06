@@ -18,7 +18,7 @@ This project was developed using Python3 and the PyGithub library. Flask was use
   - type in terminal: "python -m flask -run"
   - open URL in browser
   - submit repositories to look at and click submit
-  - if there are any changes made to the code, press "CTRL + C" in terminal to stop program and delete the data.json folder before      running it again 
+  - if there are any changes made to the code, press "CTRL + C" in terminal to stop program and delete the data.json file in the        project folder before running it again 
   
 # Home Page
 
